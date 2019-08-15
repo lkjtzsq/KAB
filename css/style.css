@@ -1,0 +1,379 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-tap-highlight-color: transparent;
+}
+
+html {
+  font-size: 100px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  background: #eaf4ff url(../images/bg4.jpg) center bottom no-repeat;
+  padding-bottom: .8rem;
+  background-size: 100%;
+}
+
+a, a:hover, a:link, a:active {
+  text-decoration: none;
+}
+
+input, button {
+  border: none;
+}
+
+input:focus, button:focus {
+  outline: none;
+}
+
+input[type=button], input[type=submit], input[type=file], button {
+  cursor: pointer;
+  -webkit-appearance: none;
+}
+
+/* banner */
+.banner {
+  height: 0;
+  padding-bottom: 56%;
+  overflow: hidden;
+  background: url(../images/default.png) center center no-repeat;
+}
+
+.banner img {
+  display: block;
+  width: 100%;
+}
+
+/* 活动简介 */
+.activity {
+  padding: .2rem;
+  background: url(../images/bg2.jpg) center top no-repeat;
+  background-size: 100%;
+  margin-bottom: .1rem;
+}
+
+.act-box {
+  padding: .2rem .15rem .35rem;
+  border:1px solid #4cd2ed;
+  position: relative;
+}
+
+.act-title {
+  font-size: .16rem;
+  padding: .04rem .12rem;
+  background: #327ce7;
+  position: absolute;
+  top: 0;
+  font-weight: normal;
+  color: #fff;
+  left: 50%;
+  border-radius: 30px;
+  margin-left: -.5rem;
+}
+
+.act-desc {
+  color: #333;
+  font-size: .14rem;
+  line-height: .24rem;
+  text-indent: 2em;
+  height: 11em;
+  overflow: hidden;
+  position: relative;
+}
+
+.act-bg {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0)), color-stop(70%, #fff));
+  background-image: linear-gradient(-180deg, rgba(255, 255, 255, 0) 0%, #fff 70%);
+  padding-bottom: 0px;
+  position: absolute;
+  bottom: 0;
+  z-index: 10;
+  width: 100%;
+  padding-top: 0;
+  text-align: center;
+  text-indent: 0;
+  color: #333;
+  left: 0;
+  height: 110px;
+}
+.act-bg.on{
+  background: none;
+}
+.act-bg img {
+  width: 20px;
+}
+
+/* data */
+.data {
+  padding: .25rem .12rem .4rem;
+  background: url(../images/bg3.jpg) center top no-repeat;
+  background-size: 100% 100%;
+}
+
+.search {
+  width: 64%;
+  display: flex;
+  margin: 0 auto;
+}
+
+.input-group {
+  flex: 1;
+  height: .3rem;
+}
+
+.search-input {
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding: 0 .1rem;
+  box-sizing: border-box;
+  border: none;
+  background: #d5e7fb;
+  font-size: .13rem;
+  border-radius: 5px;
+  color: #327ce7;
+}
+
+.search-input::-webkit-input-placeholder {
+  text-align: center;
+  color: #5693d6;
+  background: url(../images/search.png) .02rem center no-repeat;
+  padding-left: .15rem;
+  background-size: .13rem;
+}
+
+.search-btn {
+  font-size: .16rem;
+  color: #fff;
+  background: #327ce7;
+  width: .5rem;
+  height: .3rem;
+  border-radius: 5px;
+  border: none;
+  margin-left: .1rem;
+}
+
+.count {
+  display: flex;
+  margin-top: .31rem;
+}
+
+.count-item {
+  flex: 1;
+  height: .22rem;
+  position: relative;
+  text-align: center;
+}
+
+.count-title {
+  font-size: .11rem;
+  color: #666666;
+  position: relative;
+  top: -.08rem;
+}
+
+.count-num {
+  font-size: .16rem;
+  color: #327ce7;
+  position: relative;
+  top: -.03rem;
+}
+
+/* 切换部分 */
+.slide {
+  padding: .2rem;
+}
+
+.slide-head {
+  overflow: hidden;
+  background: url(../images/kuang.png) center top no-repeat;
+  background-size: 100% 100%;
+  padding: .1rem .1rem 0;
+}
+
+.slide.fixed {
+  position: fixed;
+  top: 0;
+  background: #eaf4ff;
+  width: initial;
+  left: 0;
+  z-index: 999;
+}
+
+.slide-bg {
+  display: none;
+  height: 1.2rem;
+}
+
+.slide-head p {
+  float: left;
+  width: 25%;
+  font-size: .14rem;
+  color: #327ce7;
+  height: .25rem;
+  line-height: .25rem;
+  text-align: center;
+  margin-bottom: .1rem;
+  padding: 0 .05rem;
+  box-sizing: border-box;
+}
+
+.slide-head p span {
+  display: block;
+  background: url(../images/button.png) center top no-repeat;
+  background-size: 100% 100%;
+  border-radius: 3px;
+}
+
+.slide-head p.on span {
+  background: #327ce7;
+  color: #fff;
+}
+
+.slide-box {
+  padding: 0 .2rem .2rem;
+}
+
+.slide-item {
+  display: none;
+}
+
+.slide-txt {
+  display: none;
+}
+
+.framebox iframe {
+  /* display: none; */
+}
+
+.slide-title {
+  background: url(../images/title.png) 0 0 no-repeat;
+  background-size: 100% 100%;
+  font-size: .16rem;
+  padding: .05rem .5rem .05rem .1rem;
+  display: block;
+  font-weight: normal;
+  color: #fff;
+  width: .7rem;
+}
+
+.slide-desc {
+  color: #333;
+  font-size: .14rem;
+  line-height: .24rem;
+  text-indent: 2em;
+  padding: .1rem 0 .2rem;
+}
+
+.panel {
+  overflow: hidden;
+}
+
+.panel-item {
+  float: left;
+  width: 48%;
+  background: #fff;
+  padding: .1rem;
+  box-sizing: border-box;
+  margin: 0 1%;
+  margin-bottom: .2rem;
+}
+
+.panel-pic {
+  height: 0;
+  overflow: hidden;
+  padding-bottom: 56.25%;
+  position: relative;
+  background: url(../images/default.png) center center no-repeat;
+}
+
+.panel-pic img {
+  width: 100%;
+  display: block;
+}
+
+.panel-pic span {
+  background: url(../images/video.png);
+  position: absolute;
+  width: .24rem;
+  height: .24rem;
+  background-size: 100% 100%;
+  top: 50%;
+  left: 50%;
+  margin-left: -.12rem;
+  margin-top: -.12rem;
+}
+
+.panel-title {
+  font-size: .14rem;
+  font-weight: normal;
+  color: #333;
+  line-height: .18rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  margin: .05rem 0;
+  height: .35rem;
+}
+
+.panel-title a {
+  color: #333;
+}
+
+.upic {
+  display: flex;
+  padding: .07rem 0 .15rem;
+}
+
+.upic img {
+  width: .2rem;
+  height: .2rem;
+  border-radius: 50px;
+  display: block;
+  margin-right: .05rem;
+  vertical-align: middle;
+}
+
+.upic span {
+  font-size: .13rem;
+  display: block;
+  flex: 1;
+}
+
+.agree-box {
+  font-size: .14rem;
+  border: 1px solid #327ce7;
+  border-radius: 4px;
+  color: #327ce7;
+  padding: .05rem 0;
+  display: flex;
+  margin-bottom: .08rem;
+}
+
+.agree-btn {
+  background: url(../images/heart.png);
+  background-size: 100% 100%;
+  width: .13rem;
+  height: .12rem;
+  display: inline-block;
+  margin: 0 15%;
+  align-self: center;
+}
+
+.line {
+  height: .12rem;
+  width: .01rem;
+  background: #327ce7;
+  display: inline-block;
+  margin-right: 15%;
+  align-self: center;
+}
+
+.agree-num {
+  flex: 1;
+  align-self: center;
+}
