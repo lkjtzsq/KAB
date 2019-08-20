@@ -34,6 +34,7 @@ input[type=button], input[type=submit], input[type=file], button {
 }
 
 /* banner */
+
 .banner {
   height: 0;
   padding-bottom: 56%;
@@ -47,6 +48,7 @@ input[type=button], input[type=submit], input[type=file], button {
 }
 
 /* 活动简介 */
+
 .activity {
   padding: .2rem;
   background: url(../images/bg2.jpg) center top no-repeat;
@@ -56,7 +58,7 @@ input[type=button], input[type=submit], input[type=file], button {
 
 .act-box {
   padding: .2rem .15rem .35rem;
-  border:1px solid #4cd2ed;
+  border: 1px solid #4cd2ed;
   position: relative;
 }
 
@@ -98,14 +100,17 @@ input[type=button], input[type=submit], input[type=file], button {
   left: 0;
   height: 110px;
 }
-.act-bg.on{
+
+.act-bg.on {
   background: none;
 }
+
 .act-bg img {
   width: 20px;
 }
 
 /* data */
+
 .data {
   padding: .25rem .12rem .4rem;
   background: url(../images/bg3.jpg) center top no-repeat;
@@ -182,6 +187,7 @@ input[type=button], input[type=submit], input[type=file], button {
 }
 
 /* 切换部分 */
+
 .slide {
   padding: .2rem;
 }
@@ -376,4 +382,37 @@ input[type=button], input[type=submit], input[type=file], button {
 .agree-num {
   flex: 1;
   align-self: center;
+}
+
+.activity-head {
+  font-size: .16rem;
+  display: flex;
+  margin-bottom: 0.16rem;
+}
+
+.ah-item {
+  flex: 1;
+  text-align: center;
+  color: #b3d2ff;
+  position: relative;
+  padding-bottom: 10px;
+}
+
+.ah-item i {
+  display: none;
+  width: 30px;
+  height: 3px;
+  background: #327ce7;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  margin-left: -15px;
+}
+
+.ah-item.on {
+  color: #327ce7;
+}
+
+.ah-item.on i {
+  display: block;
 }

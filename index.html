@@ -18,11 +18,43 @@
 
   <!-- 活动简介 start -->
   <section class="activity">
-    <div class="act-box">
-      <div class="act-desc">
-        <!-- <div class="act-bg"></div> -->
-        <div class="act-article">
-          <p>2019年是五四运动一百周年，为激励当代青年继承五四光荣传统，担当历史重任，传播“强国一代中国梦”理念，中国青年报社与国内知名服装企业劲霸男装（上海）有线公司、中国服装设计122121122112122111111112211212师协会共同举办“五四百年——正青春”五四风服装设计大赛。</p>
+    <div class="activity-head">
+      <p class="ah-item on">
+        活动简介
+        <i style="display:block;"></i>
+      </p>
+      <p class="ah-item">
+        活动简介
+        <i></i>
+      </p>
+      <p class="ah-item">
+        活动简介
+        <i></i>
+      </p>
+    </div>
+    <div>
+      <div class="act-box">
+        <div class="act-desc">
+          <!-- <div class="act-bg"></div> -->
+          <div class="act-article">
+            <p>2019年是五四运动一百周年，为激励当代青年继承五四光荣传统，担当历史重任，传播“强国一代中国梦”理念，中国青年报社与国内知名服装企业劲霸男装（上海）有线公司、中国服装设计122121122112122111111112211212师协会共同举办“五四百年——正青春”五四风服装设计大赛。</p>
+          </div>
+        </div>
+      </div>
+      <div class="act-box">
+        <div class="act-desc">
+          <!-- <div class="act-bg"></div> -->
+          <div class="act-article">
+            <p>大幅度发放贷放嗷嗷的2019年是五四运动一百周年，为激励当代青年继承五四光荣传统，担当历史重任，传播“强国一代中国梦”理念，中国青年报社与国内知名服装企业劲霸男装（上海）有线公司、中国服装设计122121122112122111111112211212师协会共同举办“五四百年——正青春”五四风服装设计大赛。</p>
+          </div>
+        </div>
+      </div>
+      <div class="act-box">
+        <div class="act-desc">
+          <!-- <div class="act-bg"></div> -->
+          <div class="act-article">
+            <p>3213213212019年是五四运动一百周年，为激励当代青年继承五四光荣传统，担当历史重任，传播“强国一代中国梦”理念，中国青年报社与国内知名服装企业劲霸男装（上海）有线公司、中国服装设计122121122112122111111112211212师协会共同举办“五四百年——正青春”五四风服装设计大赛。</p>
+          </div>
         </div>
       </div>
     </div>
@@ -139,33 +171,42 @@
 <script>
   $().ready(function() {
     //加载更多
-    $('.act-box').each(function(i,v){
-      var articleHeight=$(this).find('.act-article').height();
-      var selfHeight=$(this).height();
-      if(articleHeight>selfHeight){
-        var str='<div class="act-bg"><img src="images/arrow-down.png"/><img style="display:none;" src="images/arrow-up.png"/></div>';
+    $('.act-box').each(function(i, v) {
+      var articleHeight = $(this).find('.act-article').height();
+      var selfHeight = $(this).height();
+      if (articleHeight > selfHeight) {
+        var str = '<div class="act-bg"><img src="images/arrow-down.png"/><img style="display:none;" src="images/arrow-up.png"/></div>';
         $(str).appendTo($(this));
       }
+      $(this).hide();
     });
-    $('.act-bg').bind("click",function(){
-      if(!$(this).hasClass("hasShow")){
+    $('.act-box').eq(0).show();
+    $('.act-bg').bind("click", function() {
+      if (!$(this).hasClass("hasShow")) {
         $(this).addClass("hasShow on");
         $(this).siblings('.act-desc').css({
-          height:"auto",
-          overflow:"auto"
+          height: "auto",
+          overflow: "auto"
         })
         $(this).find('img').eq(0).hide();
         $(this).find('img').eq(1).show();
-      }else{
+      } else {
         $(this).removeClass("hasShow on");
-      $(this).siblings('.act-desc').css({
-          height:"11em",
-          overflow:"hidden"
+        $(this).siblings('.act-desc').css({
+          height: "11em",
+          overflow: "hidden"
         })
         $(this).find('img').eq(0).show();
         $(this).find('img').eq(1).hide();
       }
     })
+    $('.ah-item').click(function(){
+      var index=$(this).index();
+      $(this).addClass('on').siblings('.ah-item').removeClass('on');
+      $(this).find('i').show();
+      $(this).siblings('.ah-item').find('i').hide();
+      $('.act-box').eq(index).show().siblings('.act-box').hide();
+    });
     $('.slide-head p').on("click", function() {
       $(this).addClass('on').siblings('p').removeClass('on');
       var index = $(this).index();
